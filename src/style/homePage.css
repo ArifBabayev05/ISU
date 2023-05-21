@@ -1,0 +1,15 @@
+@import 'color.css';
+
+
+.nav {
+    background-color: var(--blue);
+}
+
+.userDropdown {
+    background-color: transparent
+}
+
+.userDropdown:hover {
+    background-color: transparent;
+    outline: 0
+}

@@ -1,4 +1,4 @@
-import "../../chatBot.css";
+import "../../style/chatBot.css";
 const UserChatComponent = () => {
   return (
     <>
