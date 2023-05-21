@@ -1,15 +1,14 @@
-@import 'color.css';
-
-
-.nav {
-    background-color: var(--blue);
+.hero {
+    width: 100%;
+    height: 40rem;
+    background-image: url("../images/mountains-gea5270db1_1920.jpg");
 }
 
-.userDropdown {
-    background-color: transparent
-}
-
-.userDropdown:hover {
-    background-color: transparent;
-    outline: 0
+.text {
+    height: 25rem;
+    max-width: 500px;
+    top: 180px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }

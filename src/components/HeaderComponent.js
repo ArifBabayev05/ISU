@@ -1,16 +1,18 @@
 import {
   Navbar, Nav,
-  Container, NavDropdown,
+  Container, NavDropdown, Button,
 }
   from "react-bootstrap";
-import Dropdown from 'react-bootstrap/Dropdown';
 import { LinkContainer } from 'react-router-bootstrap'
-import { Link } from "react-router-dom";
+import '../style/navbar.css'
+import { useState } from "react";
 
-import '../style/homePage.css'
 
 
 const HeaderComponent = () => {
+
+  const [isAuth, setIsAuth] = useState(true)
+
   return (
     <Navbar collapseOnSelect expand="lg" className='nav' variant="dark">
       <Container>
@@ -48,20 +50,30 @@ const HeaderComponent = () => {
               </Nav.Link>
             </LinkContainer>
 
-            <div class="dropdown">
-              <button type="button" class="btn text-light" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                <i class="bi bi-person-circle"></i>
 
-              </button>
-              <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">
-                  <i class="bi bi-person-circle"></i>
-                </a></li>
-                <li><a class="dropdown-item" href="/user/orders">Profil</a></li>
-                <li><a class="dropdown-item" href="/user/profile">Tarixçə</a></li>
-                <li><a class="dropdown-item" href="#">Çıxış</a></li>
-              </ul>
-            </div>
+            {isAuth ? <>
+              <Button className='rounded-pill' roundedCircle variant="danger">Daxil ol</Button>{' '}
+              <Button className='rounded-pill' roundedCircle variant="primary">Qeydiyyat</Button>{' '}
+            </> :
+              <>
+                <div class="dropdown">
+                  <button type="button" class="btn text-light" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">
+                      <i class="bi bi-person-circle"></i>
+                    </a></li>
+                    <li><a class="dropdown-item" href="/user/orders">Profil</a></li>
+                    <li><a class="dropdown-item" href="/user/profile">Tarixçə</a></li>
+                    <li><a class="dropdown-item" href="#">Çıxış</a></li>
+                  </ul>
+                </div>
+              </>}
+
+
+
           </Nav>
         </Navbar.Collapse>
       </Container>

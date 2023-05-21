@@ -1,60 +1,35 @@
 import React from 'react'
-import { Carousel } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import "../style/homePage.css"
 
+import Logo from '../images/iSULogo.png'
+
+// import Logo from "../../public/images/iSULogo.png"
 const ProductCarouselComponent = () => {
     return (
-        <Carousel>
-            <Carousel.Item>
-                <img
-                    crossOrigin="anonymous"
-                    className="d-block w-100"
-                    style={{ "height": "300", objectFit: "cover" }}
-                    src="/images/carousel/carousel-1.png"
-                    alt="First slide"
-                />
-                <Carousel.Caption>
-                    <LinkContainer style={{"cursor":"pointer"}} to='/product-detail'>
-                        <h3>Bestsellers in Laptop Category</h3>
-                    </LinkContainer>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    crossOrigin="anonymous"
-                    className="d-block w-100"
-                    style={{ "height": "300", objectFit: "cover" }}
-                    src="/images/carousel/carousel-2.png"
-                    alt="Second slide"
-                />
+        <div className='hero'>
+            <Container fluid='md'>
+                <Row>
+                    <Col xs={12} md={3}>
+                        <img width='220' className='mt-5' src={Logo} />
+                    </Col>
 
-                <Carousel.Caption>
-                    <LinkContainer style={{"cursor":"pointer"}} to='/product-detail'>
-                        <h3>Bestsellers in Books Category</h3>
-                    </LinkContainer>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    crossOrigin="anonymous"
-                    className="d-block w-100"
-                    style={{ "height": "300", objectFit: "cover" }}
-                    src="/images/carousel/carousel-3.png"
-                    alt="Third slide"
-                />
+                    <Col xs={12} md={9}>
+                        <div className='mt-5 text text-white'>
+                            <h1 className='fs-1 fw-bold'>Bizdən al, sağlam qal</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non leo at justo posuere luctus. Maecenas id mauris sit.
+                            </p>
 
-                <Carousel.Caption>
-                    <LinkContainer style={{"cursor":"pointer"}} to='/product-detail'>
-                        <h3>Bestsellers in Cameras Category</h3>
-                    </LinkContainer>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non leo at justo posuere luctus. Maecenas id mauris sit.
+                            </p>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 }
 
