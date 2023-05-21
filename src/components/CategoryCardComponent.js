@@ -8,10 +8,6 @@ const CategoryCardComponent = ({ category, index }) => {
   const images = [
     "/images/tablets-category.png",
     "/images/games-category.png",
-    "/images/monitors-category.png",
-    "/images/tablets-category.png",
-    "/images/monitors-category.png",
-    "/images/games-category.png",
   ]
   return (
     <Card>
