@@ -2,6 +2,7 @@ import { Row, Container } from "react-bootstrap"
 import CategoryCardComponent from "../components/CategoryCardComponent"
 import ProductCarouselComponent from "../components/ProductCarouselComponent"
 import Sponsorships from "../components/Sponsorships"
+import About from "../components/About"
 
 const HomePage = () => {
 
@@ -18,6 +19,7 @@ const HomePage = () => {
         <>
             <ProductCarouselComponent />
             <Sponsorships/>
+            <About/>
             <Container>
                 <Row xs={1} md={2} className="g-4 mt-5">
                     {

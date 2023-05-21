@@ -12,3 +12,22 @@
     align-items: center;
     position: absolute;
 }
+
+.img1 {
+    position: relative;
+    height: 200.01px;
+    top: 240px
+}
+
+.img2 {
+    position: relative;
+    right: 200px;
+    height: 200.01px;
+}
+
+.img3 {
+    position: relative;
+    right: 300px;
+    top:50px;
+    height: 380px;
+}
