@@ -16,7 +16,7 @@ const HeaderComponent = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className='nav' variant="dark">
       <Container>
-        <Navbar.Toggle className='justify-content-end' aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle className='justify-content-end' style={{zIndex:'99'}} aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className='justify-content-end' id="responsive-navbar-nav">
           <Nav>
             <LinkContainer to="/">

@@ -13,3 +13,6 @@
     background-color: transparent;
     outline: 0
 }
+nav.nav.navbar.navbar-expand-lg.navbar-dark {
+    z-index: 1;
+}

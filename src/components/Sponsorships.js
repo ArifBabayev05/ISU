@@ -5,6 +5,8 @@ import Amazon from '../images/icons/amazon.png'
 import Bloomberg from '../images/icons/Bloomberg.png'
 import Opengov from '../images/icons/opengov.png'
 import Allegro from '../images/icons/Allegro.png'
+import Circleup from '../images/icons/circleup.png'
+import Golden from '../images/icons/golden.png'
 
 const Sponsorships = () => {
     return (
@@ -18,8 +20,8 @@ const Sponsorships = () => {
                     <Col className='mb-4' md={2} xs={4}><img src={Opengov} /></Col>
                     <Col className='mb-4' md={2} xs={4}><img src={Allegro} /></Col>
                     <Col className='mb-4' md={2} xs={4}><img src={Amazon} /></Col>
-                    <Col className='mb-4' md={2} xs={4}><img src={Bloomberg} /></Col>
-                    <Col className='mb-4' md={2} xs={4}><img src={Opengov} /></Col>
+                    <Col className='mb-4' md={2} xs={4}><img src={Circleup} /></Col>
+                    <Col className='mb-4' md={2} xs={4}><img src={Golden} /></Col>
                 </Row>
             </div>
         </Container>
