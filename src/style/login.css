@@ -1,0 +1,176 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 70%;
+    min-width: 264px;
+    height: 730px;
+    background: rgba(6, 188, 251, 0.1);
+    border-radius: 20px;
+    row-gap: 20px;
+  }
+  
+  .loginContainer div,
+  .loginContainer p,
+  .loginContainer h1,
+  .loginContainer button {
+    text-align: center;
+  }
+  
+  .loginContainer h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: rgba(24, 24, 24, 0.85);
+  }
+  
+  .btns {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    min-width: 40%;
+    max-width: 100%;
+  }
+  
+  .btns button {
+    color: #ffffff;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-right: 6px;
+    border: none;
+    transition: 300ms all cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 45%;
+    height: 45px;
+  }
+  
+  .btns button:nth-child(1) {
+    background: #4884ee;
+  }
+  
+  .btns button:nth-child(2) {
+    background: #e24c33;
+  }
+  
+  .btns button:nth-child(1):hover {
+    background-color: #2670f1;
+  }
+  
+  .btns button:nth-child(2):hover {
+    background-color: #fc2600;
+  }
+  
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputContainer input {
+    width: 464px;
+    height: 64px;
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    margin: 0 auto 20px auto;
+    padding-left: 20px;
+  }
+  
+  .btnLogin {
+    width: 464px;
+    height: 64px;
+    background: #06bcfb;
+    border-radius: 20px;
+    border: none;
+    color: white;
+  }
+  
+  .left-circle-decoration {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #06bcfb;
+    border-radius: 24px;
+    top: 240px;
+    left: 20px;
+  }
+  
+  .left-circle-half-decoration {
+    background: #06bcfb;
+    opacity: 0.3;
+    border-radius: 100px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 400px;
+    left: -65px;
+  }
+  
+  .right-decor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 80px;
+    background: rgba(6, 188, 251, 0.7);
+    border-radius: 24px;
+  }
+  
+  .right-bottom-decor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 120px;
+    top: 250px;
+    background: rgba(6, 188, 251, 0.7);
+    border-radius: 24px;
+  }
+  
+  .dots {
+    position: absolute !important;
+    right: 10% !important;
+    top: 20%;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .dots,
+    .left-circle-decoration,
+    .left-circle-half-decoration,
+    .right-decor,
+    .right-bottom-decor {
+      display: none !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login {
+      width: 350px;
+    }
+  
+    .btns {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .loginContainer h1 {
+      font-size: 30px;
+    }
+  
+    .inputContainer input {
+      width: 250px;
+    }
+  
+    .btnLogin {
+      width: 250px;
+    }
+  }
+  

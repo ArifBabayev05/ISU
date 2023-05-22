@@ -1,85 +1,68 @@
-import { Container, Row, Col, Form, Button, Spinner, Alert } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import '../style/login.css'
 
 const LoginPage = () => {
-    const [validated, setValidated] = useState(false);
+    const url = ('http://localhost:8000/api/v2/authenticate/token/login/');
+
+    const [loginData, setLoginData] = useState({
+        password: '',
+        email: ''
+    })
+
+    const navigate = useNavigate();
 
 
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
+    function Submit(e) { }
 
-        setValidated(true);
-    };
+    function handle(e) {
+        e.preventDefault();
+        const newData = { ...loginData };
+        newData[e.target.id] = e.target.value;
+        setLoginData(newData);
+        console.log(loginData)
+    }
 
     return (
         <Container>
-            <Row className="mt-5 justify-content-md-center">
-                <Col md={6}>
-                    <h1>Login</h1>
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <div className="left-circle-decoration"></div>
+
+            <div className="left-circle-half-decoration"></div>
+
+            <div className="right-decor"></div>
+
+            <div className="right-bottom-decor"></div>
+
+            <div
+                className="login mt-5"
+                style={{ marginBottom: 250 + "px !important" }}
+            >
+                <form className="loginContainer" method="post" onSubmit={(e) => { Submit(e) }}>
+                    <h1>Daxil Ol</h1>
+                    <p>Sosial media ilə qeydiyyatdan keç</p>
+                    <div className="btns">
+                        <button type="button">
+                            Facebook
+                        </button>
+                        <button type="button">
+                            Google
+                        </button>
+                    </div>
+                    <p>Və yaxud e-mail ilə daxil ol</p>
+
+                    <div className="inputContainer">
+                        <input type="text" placeholder="Email" value={loginData.email} onChange={(e) => { handle(e) }} id="email" />
+                        <input type="password" placeholder="Şifrə" value={loginData.password} onChange={(e) => { handle(e) }} id="password" />
+                    </div>
+                    <button type="button" className="btnLogin" onClick={() => { navigate('/products', { replace: true }) }} >
+                        Daxil ol
+                    </button>
+                </form>
+                <a href="/signup">Qeydiyyatdan keç</a>
+            </div>
 
 
-
-                        <Form.Group className='mb-3' controlId="formBasicEmail">
-                            <Form.Label>Email Adress</Form.Label>
-                            <Form.Control
-                                required
-                                type="email"
-                                placeholder="Enter your email adress"
-                                name="email"
-                            />
-                        </Form.Group>
-
-                        <Form.Group className='mb-3' controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                required
-                                type="password"
-                                placeholder="Enter your password"
-                                name="password"
-                            />
-                        </Form.Group>
-
-                        <Form.Group className='mb-3' controlId="formBasicCheckBox">
-
-                            <Form.Check
-                                type="checkbox"
-                                name="doNotLogOut"
-                                label="Do not log out"
-                            />
-                        </Form.Group>
-
-                        <Row className='pt-2'>
-                            <Col>
-                                Dont you have account?
-                                <Link to={"/register"}> Register </Link>
-                            </Col>
-                        </Row>
-
-                        <Button variant='primary' type="submit">
-                            <Spinner
-                                as="span"
-                                animation="border"
-                                size="sm"
-                                role="status"
-                                aria-hidden="true"
-                            />
-                            Login
-                        </Button>
-
-                        <Alert show={true} variant='danger'>
-                            Wrong credentials
-                        </Alert>
-
-                    </Form>
-                </Col>
-            </Row>
         </Container>
     );
 }

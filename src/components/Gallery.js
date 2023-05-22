@@ -13,7 +13,7 @@ const Gallery = () => {
                 </div>
 
                 <Col md={4} xs={12}>
-                    <Card className='galleryCard rounded-0'>
+                    <Card className='galleryCard mb-4 rounded-0'>
                         <Card.Img variant="top" src={img1} />
                         <Card.Body>
                             <Card.Title>Card title</Card.Title>
@@ -35,7 +35,7 @@ const Gallery = () => {
                 </Col>
 
                 <Col md={4} xs={12}>
-                    <Card className='galleryCard rounded-0'>
+                    <Card className='galleryCard mb-4 rounded-0'>
                         <Card.Img variant="top" src={img2} />
                         <Card.Body>
                             <Card.Title>Card title</Card.Title>
@@ -57,7 +57,7 @@ const Gallery = () => {
                 </Col>
 
                 <Col md={4} xs={12}>
-                    <Card className='galleryCard rounded-0'>
+                    <Card className='galleryCard mb-4 rounded-0'>
                         <Card.Img variant="top" src={img3} />
                         <Card.Body>
                             <Card.Title>Card title</Card.Title>

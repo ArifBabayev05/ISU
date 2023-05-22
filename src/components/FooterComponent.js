@@ -14,7 +14,7 @@ const FooterComponent = () => {
 
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase text-dark fw-bold mb-4">
-                ytda naviqasiya
+                Saytda naviqasiya
               </h6>
               <p>
                 <a href="/" className="text-reset">Ana səhifə</a>
@@ -59,7 +59,7 @@ const FooterComponent = () => {
             </div>
 
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
+              <h6 className="text-uppercase text-dark fw-bold mb-4">
                 Mobil tətbiqi yükləyin
               </h6>
               <p>

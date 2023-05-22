@@ -1,127 +1,127 @@
-import { Container, Row, Col, Form, Button, Spinner, Alert } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import '../style/signup.css'
 const RegisterPage = () => {
-    const [validated, setValidated] = useState(false);
+    const navigate = useNavigate();
 
-    const onChange = () => {
-        const password = document.querySelector("input[name=password]")
-        const confirmPassword = document.querySelector("input[name=confirmPassword]")
 
-        if (confirmPassword.value === password.value) {
-            confirmPassword.setCustomValidity("")
-        }
-        else {
-            confirmPassword.setCustomValidity("Password do not match!")
-        }
+
+    const url = ("http://127.0.0.1:8000/api/v2/auth/users/");
+
+
+    const [userData, setUserData] = useState({
+        username: "",
+        phone_number: "",
+        first_name: "",
+        last_name: "",
+        password: "",
+        email: ""
+    });
+
+
+    function Submit(e) {
+        e.preventDefault();
+        // axios.post(url, {
+        //     username: userData.username,
+        //     phone_number: userData.phone_number,
+        //     first_name: userData.first_name,
+        //     last_name: userData.last_name,
+        //     password: userData.password,
+        //     email: userData.email
+        // },
+        //     {
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     }).then(res => {
+        //         console.log(res.userData);
+        //     })
     }
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
 
-        setValidated(true);
-    };
+
+
+
+    function handle(e) {
+
+        const newData = { ...userData };
+        newData[e.target.id] = e.target.value;
+        setUserData(newData);
+    }
 
     return (
         <Container>
-            <Row className="mt-5 justify-content-md-center">
-                <Col md={6}>
-                    <h1>Register</h1>
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <div className="container-register">
+                <div className="left-circle-decoration"></div>
 
-                        <Form.Group className='mb-3' controlId="validationCustom01">
-                            <Form.Label>First name</Form.Label>
-                            <Form.Control
-                                required
-                                type="text"
-                                placeholder="Enter your first name"
-                                name="name"
-                            />
-                            <Form.Control.Feedback type='invalid'>Please enter a name</Form.Control.Feedback>
-                        </Form.Group>
+                <div className="left-circle-half-decoration"></div>
 
-                        <Form.Group className='mb-3' controlId="formBasicLastName">
-                            <Form.Label>Last name</Form.Label>
-                            <Form.Control
-                                required
-                                type="text"
-                                placeholder="Enter your last name"
-                                name="lastName"
+                <div className="right-decor"></div>
 
-                            />
-                            <Form.Control.Feedback type='invalid'>Please enter your last name</Form.Control.Feedback>
-                        </Form.Group>
+                <div className="right-bottom-decor"></div>
 
-                        <Form.Group className='mb-3' controlId="formBasicEmail">
-                            <Form.Label>Email Adress</Form.Label>
-                            <Form.Control
-                                required
-                                type="email"
-                                placeholder="Enter your email adress"
-                                name="email"
-                            />
-                            <Form.Control.Feedback type='invalid'>Please enter a valid email adress</Form.Control.Feedback>
-                        </Form.Group>
+                <section id="register">
+                    <div className="dots">
+                        <img src={require("../images/Dots.png")} alt="dots" />
+                    </div>
+                    <h3>Qeydiyyatdan keç</h3>
+                    <p>Sosial media ilə qeydiyyatdan keç</p>
+                    <div className="btns">
+                        <button>
 
-                        <Form.Group className='mb-3' controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                required
-                                type="password"
-                                placeholder="Enter your password"
-                                name="password"
-                                minLength={6}
-                                onChange={onChange}
-                            />
-                            <Form.Control.Feedback type='invalid'>Please enter a valid password</Form.Control.Feedback>
-                            <Form.Text className="text-muted">Password should have at least 6 characters</Form.Text>
-                        </Form.Group>
+                            Facebook
+                        </button>
+                        <button>
 
-                        <Form.Group className='mb-3' controlId="formBasicPasswordRepeat">
-                            <Form.Label>Repeat Password</Form.Label>
-                            <Form.Control
-                                required
-                                type="password"
-                                placeholder="Enter repeat password"
-                                name="confirmPassword"
-                                minLength={6}
-                                onChange={onChange}
+                            Google
+                        </button>
+                    </div>
+                    <p>və yaxud</p>
+                    <form action="post" onSubmit={(e) => Submit(e)}>
+                        <div className="forms">
+                            <input onChange={(e) => handle(e)} value={userData.username} type="text" placeholder="İstifadəçi adı" id="username" />
+                        </div>
+                        <div className="forms">
+                            <input onChange={(e) => handle(e)} value={userData.first_name} type="text" placeholder="Ad" id="first_name" />
+                        </div>
+                        <div className="forms">
+                            <input onChange={(e) => handle(e)} value={userData.last_name} type="text" placeholder="Soyad" id="last_name" />
+                        </div>
+                        <div className="forms">
+                            <input onChange={(e) => handle(e)} value={userData.email} type="text" placeholder="Elektron poçt ünvanı" id="email" />
+                        </div>
+                        <div className="forms">
+                            <input onChange={(e) => handle(e)} value={userData.phone_number} type="tel" placeholder="Nömrə" id="phone_number" />
+                        </div>
+                        <div className="forms">
+                            <input onChange={(e) => handle(e)} value={userData.password} type="password" placeholder="Şifrə" id="password" />
+                        </div>
+                        <div className="forms">
+                            <input type="password" placeholder="Şifrəni yenidən daxil edin" id="passwordRepeat" />
+                        </div>
 
-                            />
-                            <Form.Control.Feedback type='invalid'>Both passwords should match!</Form.Control.Feedback>
-                        </Form.Group>
+                        <div className="forms">
+                            <button type="submit" className="submitBtn" onClick={() => { navigate('/login', { replace: true }) }}>
+                                Qeydiyyatı tamamla
+                            </button>
+                        </div>
+                    </form>
+                    <div className="footer-word">
+                        Qeydiyyatdan keçməklə{" "}
+                        <span>
+                            <a href="">Qaydalar</a>
+                        </span>{" "}
+                        və{" "}
+                        <span>
+                            <a href="">Məxfilik şərtləri</a>
+                        </span>
+                        ni qəbul edirəm.
+                    </div>
+                    <a href='/login'>Daxil ol</a>
+                </section>
 
-
-                        <Row className='pt-2'>
-                            <Col>
-                                Do you have an account already?
-                                <Link to={"/login"}> Login </Link>
-                            </Col>
-                        </Row>
-
-                        <Button type="submit">
-                            <Spinner
-                                as="span"
-                                animation="border"
-                                size="sm"
-                                role="status"
-                                aria-hidden="true"
-                            />
-                            Submit</Button>
-
-                        <Alert show={true} variant='danger'>
-                            User with that email already exists!
-                        </Alert>
-
-                        <Alert show={true} variant='info'>
-                            User created
-                        </Alert>
-                    </Form>
-                </Col>
-            </Row>
+            </div>
         </Container>
     );
 };
