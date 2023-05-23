@@ -16,7 +16,7 @@ const HeaderComponent = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className='nav' variant="dark">
       <Container>
-        <Navbar.Toggle className='justify-content-end' style={{zIndex:'99'}} aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle className='justify-content-end' style={{ zIndex: '99' }} aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className='justify-content-end' id="responsive-navbar-nav">
           <Nav>
             <LinkContainer to="/">
@@ -52,8 +52,15 @@ const HeaderComponent = () => {
 
 
             {isAuth ? <>
-              <Button className='rounded-pill' roundedCircle variant="danger">Daxil ol</Button>{' '}
-              <Button className='rounded-pill' roundedCircle variant="primary">Qeydiyyat</Button>{' '}
+              <LinkContainer to='login'>
+                <Button className='rounded-pill' roundedCircle variant="danger">
+                  Daxil ol
+                </Button>
+              </LinkContainer>
+
+              <LinkContainer to='register'>
+                <Button className='rounded-pill' roundedCircle variant="primary">Qeydiyyat</Button>
+              </LinkContainer>
             </> :
               <>
                 <div class="dropdown">

@@ -1,21 +1,20 @@
-import { Form } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 
 const CategoryFilterComponent = () => {
   return (
-    <>
-    <span className='fw-bold'>Category</span>
-      <Form>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <div key={index} className="mb-3">
-            <Form.Check type="checkbox" id={`check-api2-${index}`}>
-              <Form.Check.Input type="checkbox" isValid />
-              <Form.Check.Label style={{ cursor: "pointer" }}>{`Custom api ${index}`}</Form.Check.Label>
+    <Container>
+      <div className='p-3'>
+        <h4>Bütün məhsullar</h4>
+        <hr />
+        <p className='text-secondary'>Premium</p>
+        <p className='text-secondary'>Qazlı</p>
+        <p className='text-secondary'>Qazsız</p>
+        <p className='text-secondary'>Bidon</p>
+        <p className='text-secondary'>Vintaj</p>
 
-            </Form.Check>
-          </div>
-        ))}
-      </Form>
-    </>
+      </div>
+
+    </Container>
   );
 };
 

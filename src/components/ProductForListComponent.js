@@ -1,13 +1,27 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { Rating } from 'react-simple-star-rating'
 import { LinkContainer } from "react-router-bootstrap"
-const ProductForListComponent = ({images,index}) => {
+const ProductForListComponent = ({ images, index }) => {
   return (
     <Card style={{ margin: "30px 0 50px 0" }}>
       <Row>
         <Col lg={5}>
-          <Card.Img variant="top" src={"/images/" + images[index]+ "-category.png"} />
+          <div class="container">
+
+            <div class="row height d-flex justify-content-center align-items-center">
+              <div class="col-md-6">
+                <div class="form">
+                  <i class="fa fa-search"></i>
+                  <span class="left-pan"><i class="fa fa-microphone"></i></span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
         </Col>
+
         <Col lg={7}>
           <Card.Body>
             <Card.Title>Example Product Name</Card.Title>

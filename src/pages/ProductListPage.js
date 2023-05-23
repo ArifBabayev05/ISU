@@ -1,40 +1,27 @@
 import { Row, Col, Container, ListGroup, Button } from "react-bootstrap";
 import PaginationComponent from "../components/PaginationComponent";
 import ProductForListComponent from "../components/ProductForListComponent";
-import SortOptionsComponent from "../components/SortOptionsComponent";
-import PriceFilterComponent from "../components/filterQueryResultOptions/PriceFilterComponent";
-import RatingFilterComponent from "../components/filterQueryResultOptions/RatingFilterComponent";
 import CategoryFilterComponent from "../components/filterQueryResultOptions/CategoryFilterComponent";
-import AttributesFilterComponent from "../components/filterQueryResultOptions/AttributesFilterComponent";
+
 const ProductListPage = () => {
+
+
+    
     return (
         <Container fluid>
             <Row>
+                <h1 className='d-flex justify-content-center mt-5'>Məhsullar</h1>
                 <Col md={3}>
-                    <ListGroup variant="flush">
-                        <ListGroup.Item className="mb-3 mt-3">
-                            <SortOptionsComponent />
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            FILTER: <br />
-                            <PriceFilterComponent />
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <RatingFilterComponent />
-                        </ListGroup.Item>
-                        <ListGroup.Item>
+                    <ListGroup roundedCircle variant="flush">
+                        <h5>Kateqoriyalar</h5>
+                        <ListGroup.Item className='my-4 rounded-5'>
                             <CategoryFilterComponent />
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <AttributesFilterComponent />
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <Button variant="primary">Filter</Button>
-                            <Button variant="danger">Reset filters</Button>
                         </ListGroup.Item>
                     </ListGroup>
                 </Col>
                 <Col md={9}>
+                    <input type="text" class="w-50 form-control form-input" width='50' style={{ right: '25%' }} placeholder="Search anything..." />
+                    <div className='justify-content-end d-flex'></div>
                     {Array.from({ length: 5 }).map((_, index) => (
                         <ProductForListComponent
                             key={index}
