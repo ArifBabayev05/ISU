@@ -1,51 +1,54 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { Rating } from 'react-simple-star-rating'
 import { LinkContainer } from "react-router-bootstrap"
-const ProductForListComponent = ({ images, index }) => {
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import bottleImage from '../images/bottle.png'
+import '../style/product.css'
+
+const ProductForListComponent = (props) => {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products/${props.product.id}`)
+      .then(res => {
+        setData(res.data.length)
+      }).catch(err => console.log(err))
+
+  }, [])
+
   return (
-    <Card style={{ margin: "30px 0 50px 0" }}>
-      <Row>
-        <Col lg={5}>
-          <div class="container">
+    <div className="col ">
+      <div className='border-0 rounded container'>
+        <div className="card border-0 card-margin" style={{ "width": "250px" }}>
 
-            <div class="row height d-flex justify-content-center align-items-center">
-              <div class="col-md-6">
-                <div class="form">
-                  <i class="fa fa-search"></i>
-                  <span class="left-pan"><i class="fa fa-microphone"></i></span>
+          <Link id='cards' to={`/product-detail/${props.product.id}`} style={{ textDecoration: 'none' }}>
+
+            <div width='150' className="card-body bodyy pt-0 mt-4">
+
+              <div className="widget-49">
+                <div className="widget-49-title-wrapper">
+                  <div className="widget-49-date-primary d-flex justify-content-center p-2">
+                    <img style={{ 'width': '60px', 'border-radius': "50px",  }} src={bottleImage} alt='aaa' />
+                  </div>
+                  <div className='priceTag'>15$</div>
+                  <div className="widget-49-meeting-info">
+                    <span className="widget-49-pro-title fw-600 text-dark fs-6">{props.product.title}</span>
+                  </div>
+                  <div className="widget-49-meeting-info">
+                    <span className="widget-49-pro-description text-secondary">{props.product.description.slice(1, 20)}...</span>
+                  </div>
                 </div>
-
+                <div className="widget-49-meeting-action">
+                  <a href="/#" className="btn btn-sm btn-flash-border-primary">Daha ətraflı</a>
+                </div>
               </div>
-
             </div>
+          </Link >
+        </div>
+      </div>
 
-          </div>
-        </Col>
-
-        <Col lg={7}>
-          <Card.Body>
-            <Card.Title>Example Product Name</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Card.Text>
-              <Rating readonly size={20} initialValue={5}></Rating> (1)
-            </Card.Text>
-            <Card.Text className="h4">
-              124$ {" "}
-              <LinkContainer to='/product-detail'>
-                <Button variant="primary">
-                  Product Details
-                </Button>
-              </LinkContainer>
-            </Card.Text>
-
-          </Card.Body>
-        </Col>
-      </Row>
-
-    </Card>
+    </div>
   );
 };
 

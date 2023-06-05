@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.112a5443.css",
+    "main.js": "/static/js/main.c1eee47e.js",
+    "static/media/mountains-gea5270db1_1920.jpg": "/static/media/mountains-gea5270db1_1920.5d6ccc894d0077926aab.jpg",
+    "static/media/unsplash_Of_m3hMsoAA.png": "/static/media/unsplash_Of_m3hMsoAA.ccdf2ceaaebcfa2a28b6.png",
+    "static/media/Rectangle-958.png": "/static/media/Rectangle-958.8cd240499c48bb28510f.png",
+    "static/media/Rectangle-957.png": "/static/media/Rectangle-957.f1f24806e8f399f4e136.png",
+    "static/media/Rectangle-956.png": "/static/media/Rectangle-956.05a670de80f48c84c488.png",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/unsplash_Of_m3hMsoAA-1.png": "/static/media/unsplash_Of_m3hMsoAA-1.3da484a6af04755bc577.png",
+    "static/media/unsplash_Of_m3hMsoAA-2.png": "/static/media/unsplash_Of_m3hMsoAA-2.2f125b2404419a24f2a2.png",
+    "static/media/golden.png": "/static/media/golden.20ba2260bf85eef100da.png",
+    "static/media/iSULogo.png": "/static/media/iSULogo.4a64078b9d0c25a75edf.png",
+    "index.html": "/index.html",
+    "main.112a5443.css.map": "/static/css/main.112a5443.css.map",
+    "main.c1eee47e.js.map": "/static/js/main.c1eee47e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.112a5443.css",
+    "static/js/main.c1eee47e.js"
+  ]
+}

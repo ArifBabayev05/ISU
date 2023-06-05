@@ -21,7 +21,7 @@ const Sponsorships = () => {
                     <Col className='mb-4' md={2} xs={4}><img src={Allegro} /></Col>
                     <Col className='mb-4' md={2} xs={4}><img src={Amazon} /></Col>
                     <Col className='mb-4' md={2} xs={4}><img src={Circleup} /></Col>
-                    <Col className='mb-4' md={2} xs={4}><img src={Golden} /></Col>
+                    <Col className='mb-4' md={2} xs={4}><img src={Amazon} /></Col>
                 </Row>
             </div>
         </Container>
