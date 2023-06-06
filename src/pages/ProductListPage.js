@@ -83,7 +83,8 @@ const ProductListPage = () => {
     return (
         <Container>
             <Row >
-              
+                <h1 className='d-grid justify-content-center pageTitle mt-5'>Məhsullar
+                </h1>
 
                 <Col md={3}>
                     <ListGroup roundedCircle variant="flush">
