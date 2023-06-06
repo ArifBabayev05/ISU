@@ -20,7 +20,7 @@ const ProductForListComponent = (props) => {
   return (
     <div className="col ">
       <div className='border-0 rounded container'>
-        <div className="card border-none card-margin" style={{ "width": "250px" }}>
+        <div className="card mx-1 border-none card-margin" style={{ "width": "250px" }}>
 
           <Link id='cards' to={`/product-detail/${props.product.id}`} style={{ textDecoration: 'none' }}>
 

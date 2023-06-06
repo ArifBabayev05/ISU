@@ -81,9 +81,9 @@ const ProductListPage = () => {
             ).reverse();
     }
     return (
-        <Container>
+        <Container fluid>
             <Row >
-                <h1 className='d-grid justify-content-center pageTitle mt-5'>Məhsullar
+                <h1 className='d-grid justify-content-center pageTitle mt-5 my-4'>Məhsullar
                     <div className='blueLine'></div>
                 </h1>
 
