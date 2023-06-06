@@ -20,7 +20,7 @@ const ProductForListComponent = (props) => {
   return (
     <div className="col ">
       <div className='border-0 rounded container'>
-        <div className="card border-0 card-margin" style={{ "width": "250px" }}>
+        <div className="card border-none card-margin" style={{ "width": "250px" }}>
 
           <Link id='cards' to={`/product-detail/${props.product.id}`} style={{ textDecoration: 'none' }}>
 
@@ -39,9 +39,7 @@ const ProductForListComponent = (props) => {
                     <span className="widget-49-pro-description text-secondary">{props.product.description.slice(1, 20)}...</span>
                   </div>
                 </div>
-                <div className="widget-49-meeting-action">
-                  <a href="/#" className="btn btn-sm btn-flash-border-primary">Daha ətraflı</a>
-                </div>
+                
               </div>
             </div>
           </Link >

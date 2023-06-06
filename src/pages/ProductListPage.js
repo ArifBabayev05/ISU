@@ -81,10 +81,10 @@ const ProductListPage = () => {
             ).reverse();
     }
     return (
-        <Container fluid>
+        <Container>
             <Row >
-                <h1 className='d-flex justify-content-center pageTitle mt-5'>Məhsullar</h1>
-                {/* <div className='blueLine'></div> */}
+              
+
                 <Col md={3}>
                     <ListGroup roundedCircle variant="flush">
                         <h5>Kateqoriyalar</h5>
@@ -96,12 +96,18 @@ const ProductListPage = () => {
                 <Col md={9}>
                     <div>
                         <div className='d-flex container'>
-                            <form className='searchJob mb-5' style={{ alignItems: 'center', display: 'flex', top: '20px' }}>
-                                <input className='searchBar mt-2 p-2' onChange={event => setQuery(event.target.value)} type='text'></input>
-                                <button className='search__submit' type='submit'>
-                                    <img src="" alt='some value' />
-                                </button>
-                            </form>
+
+
+                            <div className='inner-form'>
+                                <div className='input-field'>
+                                    <button type='button' className="btn-search">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                        </svg>
+                                    </button>
+                                    <input id="search" onChange={event => setQuery(event.target.value)} type="text" />
+                                </div>
+                            </div>
                         </div>
 
                         <div className='row row-cols-1 row-cols-sm-1 row-cols-lg-3 g-4 mx-5'>

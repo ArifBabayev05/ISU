@@ -25,7 +25,63 @@
     height: 6px;
     left: 860px;
     top: 153px;
-    position: relative;
     background: #339AF0;
     border-radius: 20px;
+}
+.card{
+    border: none;
+    border-radius: 0;
+}
+
+.inner-form {
+    width: 100%;
+    margin-bottom: 17px;
+    border: none;
+    justify-content: center;
+    display: flex;
+}
+.inner-form .input-field {
+    width: 50%;
+    position: relative;
+
+}
+.inner-form .input-field input {
+    height: 100%;
+    width: 100%;
+    background: 0 0;
+    border: 0;
+    background: #fff;
+    display: block;
+    width: 100%;
+    padding: 10px 32px 10px 70px;
+    font-size: 18px;
+    color: #666;
+    border-radius: 10px;
+}
+.btn-search svg {
+    fill: #ccc;
+    width: 15px;
+    height: 15px;
+    transition: all .2s ease-out,color .2s ease-out;
+}
+input:focus{
+    outline: none;
+}
+.btn-search {
+    width: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: 0 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
 }
