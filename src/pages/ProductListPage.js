@@ -84,6 +84,7 @@ const ProductListPage = () => {
         <Container>
             <Row >
                 <h1 className='d-grid justify-content-center pageTitle mt-5'>Məhsullar
+                    <div className='blueLine'></div>
                 </h1>
 
                 <Col md={3}>
