@@ -6,6 +6,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductListPage from "./pages/ProductListPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import ContactPage from "./pages/ContactPage";
 import UserProfilePage from "./pages/user/UserProfilePage";
 import UserOrderDetailsPage from "./pages/user/UserOrderDetailsPage";
 import UserCartDetailPage from "./pages/user/UserCartDetailPage";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element="Page not exist 404" />
         </Route>
 

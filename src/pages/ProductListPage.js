@@ -5,6 +5,7 @@ import CategoryFilterComponent from "../components/filterQueryResultOptions/Cate
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../style/product.css"
+import Pageheader from "../utils/PageHeader";
 
 const ProductListPage = () => {
     const url = `https://fakestoreapi.com/products`
@@ -83,9 +84,11 @@ const ProductListPage = () => {
     return (
         <Container fluid>
             <Row >
-                <h1 className='d-grid justify-content-center pageTitle mt-5 my-4'>Məhsullar
-                    <div className='blueLine'></div>
-                </h1>
+
+                <div className='mb-4' >
+                    <Pageheader header="Məhsullar" />
+                </div>
+
 
                 <Col md={3}>
                     <ListGroup roundedCircle variant="flush">
