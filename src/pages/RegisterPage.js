@@ -8,7 +8,7 @@ const RegisterPage = () => {
 
 
 
-    const url = ("http://127.0.0.1:8000/api/v2/auth/users/");
+    // const url = ("http://127.0.0.1:8000/api/v2/auth/users/");
 
 
     const [userData, setUserData] = useState({

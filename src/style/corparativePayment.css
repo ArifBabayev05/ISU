@@ -1,0 +1,95 @@
+.method {
+    width: 100%;
+    height: 148px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.method {
+    height: 130%;
+    display: flex;
+    align-items: center;
+}
+
+.add-new-card:nth-child(1) {
+    display: flex;
+    column-gap: 20px;
+    margin-left: 20px;
+    padding: 10px 0;
+    height: 85%;
+}
+
+
+.corporative-popup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 0%;
+  }
+  
+  .corporative-popup>div {
+    position: absolute;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 80%;
+    height: 700px;
+    gap: 30px;
+     top: 100%;
+     padding: 60px 0px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #ffffff;
+    -webkit-box-shadow: 10px 10px 10px 2000px rgba(9, 9, 9, 0.353);
+    box-shadow: 10px 10px 10px 2000px rgba(9, 9, 9, 0.353);
+  }
+
+  .popup-btns{
+    display: flex;
+column-gap: 20px;
+  }
+
+  
+  .popup-btns button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    width: 240px;
+    height: 50px;
+    background: #339af0;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .5s;
+  
+  }
+  
+  .popup-btns button:hover{
+    background: #E24C33;
+  transition: .5s;
+  }

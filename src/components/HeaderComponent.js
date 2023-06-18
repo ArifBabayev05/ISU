@@ -11,7 +11,7 @@ import { useState } from "react";
 
 const HeaderComponent = () => {
 
-  const [isAuth, setIsAuth] = useState(true)
+  const [isAuth, setIsAuth] = useState(false)
 
   return (
     <Navbar collapseOnSelect expand="lg" className='nav' variant="dark">
@@ -72,7 +72,7 @@ const HeaderComponent = () => {
                     <li><a class="dropdown-item" href="#">
                       <i class="bi bi-person-circle"></i>
                     </a></li>
-                    <li><a class="dropdown-item" href="/user/orders">Profil</a></li>
+                    <li><a class="dropdown-item" href="/user">Profil</a></li>
                     <li><a class="dropdown-item" href="/user/profile">Tarixçə</a></li>
                     <li><a class="dropdown-item" href="#">Çıxış</a></li>
                   </ul>

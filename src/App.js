@@ -25,6 +25,10 @@ import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 import ScrollToTop from "./utils/ScrolToTop";
+import UserPaymentPage from "./pages/user/UserPaymentPage";
+import CorporativePaymentPage from "./pages/CorporativePaymentPage";
+import ManualContractPage from "./pages/ManualContractPage";
+import RequisiteUpload from "./pages/RequisiteUpload";
 
 function App() {
   return (
@@ -51,6 +55,12 @@ function App() {
           <Route path="/user/orders" element={<UserOrderPage />} />
           <Route path="/user/order-details" element={<UserOrderDetailsPage />} />
           <Route path="/user/cart-details" element={<UserCartDetailPage />} />
+
+          {/* Payments Section */}
+          <Route path="/user/payment" element={<UserPaymentPage />} />
+          <Route path="/corparativepayment" element={<CorporativePaymentPage />} />
+          <Route path="/requisite" element={<ManualContractPage />} />
+          <Route path="requisiteupload" element={<RequisiteUpload />} />
         </Route>
 
         {/* Admin Protected Routes */}

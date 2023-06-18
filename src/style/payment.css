@@ -1,0 +1,671 @@
+/* Payment */
+.payment {
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 72px;
+    -ms-flex-pack: distribute;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .product__card__img img {
+        width: 70% !important;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .product__card__img img {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .payment {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    }
+
+    .payment .product__card {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .payment .payment__methods {
+        margin: 0 auto;
+        width: 90% !important;
+    }
+
+    .payment .fill-card-datas {
+        margin: 0 auto;
+        width: 90% !important;
+    }
+
+    .payment .fill-card-datas .card-datas {
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+
+    .payment .fill-card-datas .card-datas input {
+        width: 70% !important;
+    }
+
+    .payment-submit {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .card-type-svg,
+    .warning-svg {
+        left: 62% !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product__card__img img {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .product__card {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+        flex-direction: column-reverse !important;
+    }
+
+    .product__card__img img {
+        width: 50% !important;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .card-type-svg,
+    .warning-svg {
+        left: 59% !important;
+    }
+
+    .bank-name {
+        width: 10ch !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .date {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+
+    .card-datas input {
+        width: 80% !important;
+    }
+}
+
+input[type="checkbox"]:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/icons/checkbox.svg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* PaymentProduct */
+.product__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 25px;
+    height: 70%;
+}
+
+.product__card .product__card__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product__card .product__card__text .product__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.product__card .product__card__text .product__info .product__name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product__card .product__card__text .product__info .product__name h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 39px;
+    color: #606060;
+}
+
+.product__card .product__card__text p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 39px;
+    color: #606060;
+}
+
+
+.product__card .product__card__text .location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: baseline;
+}
+
+.product__card .product__card__text .location .location__img img {
+    width: 70%;
+}
+
+.product__card .product__card__text .product__fee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+}
+
+.product__card .product__card__text .product__fee h5 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+    text-align: center;
+    color: #000000;
+}
+
+.product__card .product__card__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.product__card .product__card__img img {
+    width: 50%;
+    min-width: 110px;
+}
+
+/* Adding Card */
+.fill-card-datas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    height: 55%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.fill-card-datas h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+    color: #0189fb;
+}
+
+.fill-card-datas form .card-datas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card-datas input {
+    background: #FFFFFF;
+    border: 1px solid #D2D5DA;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding-left: 10px;
+    height: 40px;
+    width: 70%;
+}
+
+.card-datas label {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    position: relative;
+    top: 12px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #121826;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+
+.card-datas select {
+    background: #FFFFFF;
+    border: 1px solid #D2D5DA;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    height: 40px;
+    width: 150px;
+}
+
+.card-datas>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.fill-card-datas form .card-datas .date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+input ::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.fill-card-datas form .card-datas button {
+    width: 120px;
+    height: 50px;
+    background: #339af0;
+    border-radius: 8px;
+    font-family: "Inter";
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: .5s;
+    margin: auto;
+}
+
+.fill-card-datas form .card-datas button:hover {
+    background: #E24C33;
+    transition: .5s;
+}
+
+/* Card Info */
+.payment .payment__infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.payment .payment__infos .payment__methods {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.payment .payment__infos .payment__methods .payment-cash {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    background: #FFFFFF;
+    border: 1px solid #F5F5F5;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+}
+
+.payment .payment__infos .payment__methods .payment-cash h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 39px;
+    color: #0189FB;
+}
+
+.payment .payment__infos .payment__methods .payment-cash div {
+    display: flex;
+    column-gap: 10px;
+    align-items: baseline;
+}
+
+
+.payment .payment__infos .payment__methods .payment-cash div label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 39px;
+    color: #606060;
+}
+
+.payment .payment__infos .payment__methods .payment-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #F5F5F5;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    background: #FFFFFF;
+    padding: 25px;
+}
+
+.payment .payment__infos .payment__methods .payment-cards h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 39px;
+    color: #0189FB;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .cards .card-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .cards .card-info .card-img {
+    width: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .cards .card-info .bank-name,
+.card-code {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #606060;
+    width: 18ch;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .add-new-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: baseline;
+    column-gap: 10px;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .add-new-card div {
+    cursor: pointer;
+}
+
+.payment .payment__infos .payment__methods .payment-cards .add-new-card h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 39px;
+    text-align: center;
+    color: #606060;
+}
+
+
+.payment .payment__infos form .payment-submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 20px;
+}
+
+.payment .payment__infos form .payment-submit .total-fee {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.payment .payment__infos form .payment-submit button {
+    width: 120px;
+    height: 50px;
+    background: #339AF0;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.payment .payment__infos form .payment-submit button:hover {
+    background: #E24C33;
+    transition: 0.5s;
+}
+
+/* ContractEdit Pop Up */
+.edit-popup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 0%;
+}
+
+.edit-popup>div {
+    position: absolute;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    gap: 30px;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #ffffff;
+    -webkit-box-shadow: 10px 10px 10px 2000px rgba(9, 9, 9, 0.353);
+    box-shadow: 10px 10px 10px 2000px rgba(9, 9, 9, 0.353);
+    border-radius: 20px;
+}
+
+.edit-popup-btns {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.edit-popup button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    width: 240px;
+    height: 50px;
+    background: #339af0;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.edit-popup button:hover {
+    background: #e24c33;
+    transition: 0.5s;
+}
