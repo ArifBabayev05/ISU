@@ -1,0 +1,70 @@
+.table-container {
+    max-height: 300px;
+    overflow: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}  
+  .table td {
+    border-bottom: none;
+    padding: 10px; 
+  }
+
+.progress-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+}
+
+.progress-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    z-index: 1;
+    color: #007bff;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    /* left: 13px; */
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.progress-indicator .progress-circle.active {
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    color: #fff;
+}
+
+
+.progress-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.status-name {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+}

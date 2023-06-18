@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "../../style/ProfilePage.css"
 import Pageheader from "../../utils/PageHeader";
+import Orders from "../../components/UserProfileContents/Orders";
+import Packages from "../../components/UserProfileContents/Packages";
+import Favorites from "../../components/UserProfileContents/Favorites";
+import Informations from "../../components/UserProfileContents/Informations";
 
 const UserProfilePage = () => {
   const [activeTab, setActiveTab] = useState('wants');
@@ -51,26 +55,25 @@ const UserProfilePage = () => {
           <div className="main-content">
             {activeTab === 'wants' && (
               <div>
-                <h2>Wants</h2>
-                {/* Content for the Wants tab */}
+                <Packages/>
               </div>
             )}
             {activeTab === 'orders' && (
               <div>
-                <h2>Orders</h2>
-                {/* Content for the Orders tab */}
+                
+                <Orders/>
               </div>
             )}
             {activeTab === 'likeds' && (
               <div>
-                <h2>Likeds</h2>
-                {/* Content for the Likeds tab */}
+              
+                <Favorites/>
               </div>
             )}
             {activeTab === 'mydata' && (
               <div>
-                <h2>My Data's</h2>
-                {/* Content for the My Data's tab */}
+              
+                <Informations/>
               </div>
             )}
           </div>
