@@ -85,10 +85,7 @@ const ProductListPage = () => {
         <Container fluid>
             <Row >
 
-                <div className='mb-4' >
-                    <Pageheader header="Məhsullar" />
-                </div>
-
+                <Pageheader header="Məhsullar" />
 
                 <Col md={3}>
                     <ListGroup roundedCircle variant="flush">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../style/ProfilePage.css"
+import Pageheader from "../../utils/PageHeader";
 
 const UserProfilePage = () => {
   const [activeTab, setActiveTab] = useState('wants');
@@ -10,7 +11,8 @@ const UserProfilePage = () => {
 
   return (
     <div className="container user-page-container">
-        <div className="row">
+      <Pageheader header="İstifadəçi Hesabı" />
+      <div className="row">
         <div className='col-lg-3 col-md-12'>
           <div className="sidebar">
             <ul>
