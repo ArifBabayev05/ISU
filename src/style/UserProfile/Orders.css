@@ -1,5 +1,5 @@
 .table-container {
-    max-height: 300px;
+    max-height: 320px;
     overflow: auto;
     border-collapse: separate;
     border-spacing: 0;
@@ -22,14 +22,14 @@
     height: 20px;
     border-radius: 50%;
     background-color: #fff;
-    border: 2px solid #007bff;
+    border: 2px solid var(--blueUser);
     margin: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 10px;
     z-index: 1;
-    color: #007bff;
+    color: var(--blueUser);
 }
 
 .progress-line {
@@ -38,21 +38,21 @@
     /* left: 13px; */
     width: 100%;
     height: 2px;
-    background-color: #007bff;
+    background-color: var(--blueUser);
 }
 
 .progress-indicator .progress-circle.active {
-    background-color: #007bff;
-    border: 2px solid #007bff;
+    background-color: var(--blueUser);
+    border: 2px solid var(--blueUser);
     color: #fff;
 }
 
 
 .progress-circle {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    border: 2px solid #007bff;
+    border: 2px solid var(--blueUser);
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -62,9 +62,13 @@
 
 .status-name {
     position: absolute;
-    bottom: -20px;
-    left: 0;
+    bottom: -27px;
+    /* width: 0px; */
+    height: 20px;
+    width: 55px;
+    display: flex;
+    left: -14px;
     right: 0;
     text-align: center;
-    font-size: 12px;
+    font-size: 8px;
 }

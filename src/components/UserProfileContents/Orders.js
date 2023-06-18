@@ -45,7 +45,7 @@ function Orders() {
             case 'order delivered':
                 return {
                     circles: [true, true, false],
-                    thickCircleIndex: 1,
+                    thickCircleIndex: 2,
                     statusNames: ['Sifariş verilib ', 'Sifariş qeydə alınıb ', 'Təhvil verilib'],
                 };
             case 'finish':
@@ -90,10 +90,9 @@ function Orders() {
                                                 className={`progress-circle ${circle ? 'active' : ''
                                                     } ${index === getStatusConfig(order.status).thickCircleIndex ? 'thick' : ''}`}
                                             >
-                                                {index === getStatusConfig(order.status).thickCircleIndex && (
-                                                    <i style={{ fontSize: "25px" }} class="bi bi-check-lg"></i>
-                                                )}
-                                                <span className="status-name">
+                                                    <i style={{ fontSize: "25px",color:'white' }} class="bi bi-check-lg"></i>
+                                               
+                                                <span className="status-name" style={{'color':'#878787'}}>
                                                     {getStatusConfig(order.status).statusNames[index]}
                                                 </span>
                                             </div>
