@@ -67,9 +67,11 @@ function Orders() {
     return (
         <div>
             <div className="mb-3">
-                <input type="text" onChange={event => setQuery(event.target.value)} className="form-control" placeholder="Search" />
+                <input type="text" onChange={event => setQuery(event.target.value)} className="form-control searchBar" placeholder="Sifarişi axtarın" />
             </div>
+            
             <div className="table-container">
+                
                 <table className="table">
                     <thead>
                         <tr>

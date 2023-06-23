@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin:12px 0;
+
+}
+
+.header>h1 {
+    color: rgba(24, 24, 24, 0.50);
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.header>div {
+    width: 100px;
+    margin-top:5px;
+    height: 4px;
+    background-color: #339AF0;
+    color: black;
+    border-radius: 20px;
+}
