@@ -20,7 +20,8 @@ const UserProfilePage = () => {
         <div className='col-lg-3 col-md-12'>
           <div className="sidebar">
             <ul>
-              <li className="user-info">
+              <li className="user-info p-3">
+                <i style={{ 'font-size': '28px' }} class="bi bi-person-circle"></i>
                 Name Surname
               </li>
 
@@ -28,25 +29,33 @@ const UserProfilePage = () => {
                 className={activeTab === 'wants' ? 'active' : ''}
                 onClick={() => handleTabChange('wants')}
               >
+                <i style={{ 'font-size': '20px' }} class="bi bi-box-seam"></i>
                 Wants
               </li>
               <li
                 className={activeTab === 'orders' ? 'active' : ''}
                 onClick={() => handleTabChange('orders')}
               >
+                <i style={{ 'font-size': '20px' }} class="bi bi-basket2"></i>
                 Orders
               </li>
               <li
                 className={activeTab === 'likeds' ? 'active' : ''}
                 onClick={() => handleTabChange('likeds')}
               >
+                <i style={{ 'font-size': '20px' }} className='bi bi-heart'></i>
                 Likeds
               </li>
               <li
                 className={activeTab === 'mydata' ? 'active' : ''}
                 onClick={() => handleTabChange('mydata')}
               >
-                My Data's
+                <i style={{ 'font-size': '20px' }} className='bi bi-person'></i>
+                Likeds
+              </li>
+              <li>
+                <i style={{ 'font-size': '20px' }} className='bi bi-door-open'></i>
+                Çıxış et
               </li>
             </ul>
           </div>
@@ -55,25 +64,25 @@ const UserProfilePage = () => {
           <div className="main-content">
             {activeTab === 'wants' && (
               <div>
-                <Packages/>
+                <Packages />
               </div>
             )}
             {activeTab === 'orders' && (
               <div>
-                
-                <Orders/>
+
+                <Orders />
               </div>
             )}
             {activeTab === 'likeds' && (
               <div>
-              
-                <Favorites/>
+
+                <Favorites />
               </div>
             )}
             {activeTab === 'mydata' && (
               <div>
-              
-                <Informations/>
+
+                <Informations />
               </div>
             )}
           </div>
