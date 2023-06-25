@@ -1,0 +1,48 @@
+.card {
+    width: 300px;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* Adds spacing between cards */
+}
+
+.card-image {
+    object-fit: contain;
+    width: 100%;
+    max-height: 200px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    color: #000;
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.card-description {
+    margin-bottom: 16px;
+    color: rgba(24, 24, 24, 0.50);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 22px;
+}
+
+.view-more-button {
+    border: none;
+    color: red;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 0;
+    cursor: pointer;
+}

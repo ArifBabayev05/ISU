@@ -29,6 +29,8 @@ import UserPaymentPage from "./pages/user/UserPaymentPage";
 import CorporativePaymentPage from "./pages/CorporativePaymentPage";
 import ManualContractPage from "./pages/ManualContractPage";
 import RequisiteUpload from "./pages/RequisiteUpload";
+import BlogDetailsPage from "./pages/BlogDetailsPage";
+import BlogListPage from "./pages/BlogListPage";
 
 function App() {
   return (
@@ -42,6 +44,9 @@ function App() {
           <Route path="/product-detail" element={<ProductDetailsPage />} />
           <Route path="/product-detail/:id" element={<ProductDetailsPage />} />
           <Route path="/products" element={<ProductListPage />} />
+          {/* <Route path="/blog-detail" element={<BlogDetailsPage />} /> */}
+          {/* <Route path="/blog-detail/:id" element={<BlogDetailsPage />} /> */}
+          <Route path="/blog" element={<BlogListPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/contact" element={<ContactPage />} />
