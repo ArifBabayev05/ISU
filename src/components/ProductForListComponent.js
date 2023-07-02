@@ -29,17 +29,20 @@ const ProductForListComponent = (props) => {
               <div className="widget-49">
                 <div className="widget-49-title-wrapper">
                   <div className="widget-49-date-primary d-flex justify-content-center p-2">
-                    <img style={{ 'width': '60px', 'border-radius': "50px",  }} src={bottleImage} alt='aaa' />
+                    <img style={{ 'width': '60px', 'border-radius': "50px", }} src={bottleImage} alt='aaa' />
                   </div>
                   <div className='priceTag'>15$</div>
                   <div className="widget-49-meeting-info">
-                    <span className="widget-49-pro-title fw-600 text-dark fs-6">{props.product.title}</span>
+                    <span className="widget-49-pro-title fw-600 text-dark fs-6">Badamlı Qazsız Su</span>
                   </div>
                   <div className="widget-49-meeting-info">
-                    <span className="widget-49-pro-description text-secondary">{props.product.description.slice(1, 20)}...</span>
+                    <span className="widget-49-pro-description text-secondary">Mineral su yerin ən dərin qatlarından çıxır, çıxdığı yerin geoloji xüsusiyyətlərini daşıyır və ...</span>
+
+                    
+
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </Link >

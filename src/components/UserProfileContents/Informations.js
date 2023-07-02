@@ -67,7 +67,7 @@ const Informations = () => {
               <input type="password" placeholder='XXXXXXXX' className="form-control rounded-pill" id="confirmPassword" />
             </div>
           </div>
-          <div className="card-bottom">
+          <div className="cardd-bottom">
             <button className="btn btn-primary submit-button">Məlumatları güncəllə</button>
           </div>
         </div>

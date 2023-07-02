@@ -24,19 +24,39 @@ const ProductDetailsPage = (props) => {
 
             <Row className="my-5">
                 <Col className='justify-content-center d-flex' style={{ zIndex: 1 }} md={6}>
-                    <img alt="some value" width='130' src={bottleImage} />
+                    <img style={{ "object-fit": "contain" }} alt="some value" width='130' src={bottleImage} />
 
                 </Col>
                 <Col md={6}>
 
                     <div>
-                        <h3>{data.title}</h3>
+                        {/* <h3>{data.title}</h3> */}
+                        <h3>Badamlı Qazsız Su</h3>
                     </div>
                     <p className="text-danger">Premium</p>
 
                     <div>
                         <p className='text-secondary'>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                            Mineral su yerin ən dərin qatlarından çıxır, çıxdığı yerin geoloji xüsusiyyətlərini daşıyır və maqmadan aldığı karbon qazının təzyiqi ilə səthə çıxır. Bu səbəblə mineral su minerallarla çox zəngindir.<br /> <br />
+
+                            ISU ilə təbii su sifarişi həm sərfəli, həm də rahatdır. 3 ədəd 19 litrlik bidon su sifarişi verənə 1 ədəd pompa ilk sifarişdə hədiyyə olunur. Evlərə su çatdırılması depozitsiz və pulsuzdur.
+                            <br />
+                            <br />
+
+                            Su sifarişi mobil tətbiqdə
+                            <br />
+                            Susifarişi indi mobil tətbiqlə daha asan!  <br />
+                            App ilə su sifarişinin üstünlükləri:  <br />
+                            - Bir toxunuşla sifariş;  <br />
+                            - Rahat seçim imkanı;  <br />
+                            - Sifarişi uyğun zamana planlama;  <br />
+                            - 7/24 sifariş planlama;  <br />
+                            - Yer seçiminin xəritə üzərindən olması;  <br />
+                            <br />
+
+
+                            Mobil tətbiqi yükləyərək sadəcə bir toxunuşla sifarişinizi təsdiqləyin və ISU'dan qapınıza gəlsin!
+
                         </p>
                         <button type="button" style={{ backgroundColor: "var(--light-blue)" }} class="btn text-white rounded-4">Sifariş et</button>
 

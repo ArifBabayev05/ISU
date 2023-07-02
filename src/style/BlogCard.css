@@ -1,4 +1,4 @@
-.card {
+.cardd {
     width: 300px;
     max-height: 400px;
     border-radius: 10px;
@@ -9,7 +9,7 @@
     /* Adds spacing between cards */
 }
 
-.card-image {
+.cardd-image {
     object-fit: contain;
     width: 100%;
     max-height: 200px;
@@ -17,11 +17,11 @@
     padding: 10px;
 }
 
-.card-content {
+.cardd-content {
     padding: 16px;
 }
 
-.card-title {
+.cardd-title {
     color: #000;
     margin-bottom: 8px;
     font-size: 22px;
@@ -30,7 +30,7 @@
     line-height: 22px;
 }
 
-.card-description {
+.cardd-description {
     margin-bottom: 16px;
     color: rgba(24, 24, 24, 0.50);
     font-size: 16px;
